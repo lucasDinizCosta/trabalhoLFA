@@ -1,0 +1,22 @@
+<data>
+    <alfabeto>
+        <simbolo name="simbolo">a</simbolo>
+        <simbolo name="simbolo">b</simbolo>
+    </alfabeto>
+    <estados>
+        <simbolo name="estado">1</simbolo>
+        <simbolo name="estado">2</simbolo>
+        <simbolo name="estado">3</simbolo>
+        <simbolo name="estado">4</simbolo>
+    </estados>
+    <P>
+        <transicao name="transicao">1</transicao>
+        <transicao name="transicao">2</transicao>
+        <transicao name="transicao">3</transicao>
+        <transicao name="transicao">4</transicao>
+    </P>
+    <items>
+        <item name="item1">item1abc</item>
+        <item name="item2">item2abc</item>
+    </items>
+</data>
