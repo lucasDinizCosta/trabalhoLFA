@@ -1,0 +1,23 @@
+<data>
+    <alphabet>
+        <simbol name="simbol">a</simbol>
+        <simbol name="simbol">b</simbol>
+    </alphabet>
+    <states>
+        <state name="state">1</state>
+        <state name="state">2</state>
+        <state name="state">3</state>
+    </states>
+    <P>
+        <transition name="transition">1,2,a</transition>
+        <transition name="transition">2,1,b</transition>
+        <transition name="transition">2,3,b</transition>
+        <transition name="transition">3,1,a</transition>
+    </P>
+    <q>
+        <initialState name="state">1</initialState>
+    </q>
+    <F>
+        <finalState name="state">1</finalState>
+    </F>
+</data>
