@@ -6,24 +6,26 @@ import networkx as nx #Biblioteca com os recursos para montar um multigrafo dire
 #Retorna o dicionário que representa o automato descrito pelo arquivo
 def createAutFromXML(fileName):
     
-    xmldoc = minidom.parse(fileName)
-    
-    #Divide cada tag do xml por propriedade do automato
-    alphabet = xmldoc.getElementsByTagName('simbol')
-    Q = xmldoc.getElementsByTagName('state')
-    P = xmldoc.getElementsByTagName('transition')
-    q = xmldoc.getElementsByTagName('initialState')
-    F = xmldoc.getElementsByTagName('finalState')
-    
-    #Dicionário que representa automato com cada elemento de sua 5-upla 
-    af = {}
-    af['alphabet'] = alphabet
-    af['Q'] = Q
-    af['P'] = P
-    af['q'] = q
-    af['F'] = F
-    
-    return af
+    with open(fileName) as f:
+        
+        xmldoc = minidom.parse(f)
+        
+        #Divide cada tag do xml por propriedade do automato
+        alphabet = xmldoc.getElementsByTagName('simbol')
+        Q = xmldoc.getElementsByTagName('state')
+        P = xmldoc.getElementsByTagName('transition')
+        q = xmldoc.getElementsByTagName('initialState')
+        F = xmldoc.getElementsByTagName('finalState')
+        
+        #Dicionário que representa automato com cada elemento de sua 5-upla 
+        af = {}
+        af['alphabet'] = alphabet
+        af['Q'] = Q
+        af['P'] = P
+        af['q'] = q
+        af['F'] = F
+        
+        return af
 
 #Cria o grafo que representa o autamato
 #Recebe o dicionário que representa o automato
